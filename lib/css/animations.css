@@ -1,0 +1,203 @@
+body {
+    padding: 40px;
+    display: flex;
+  }
+  /* Rotate square start */
+  .square {
+        width: 150px;
+        height: 150px;
+        animation-name: rotate;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: reverse;
+  }
+  
+  @keyframes rotate {
+      from {
+          transform:rotate(0deg);
+      }
+      to {
+          transform:rotate(360deg);
+      }
+    }
+
+    .color {
+        width: 150px;
+        height: 150px;
+        animation-name: color;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+    }
+    @keyframes color {
+        from {
+            background-color: yellow;
+        }
+        to {
+            background-color: blue;
+        }
+    }
+    /* Rotate square end */
+    /* Subscibe button start */
+    .subscribe-button {
+        margin-top:60px;
+        width:400px;
+        height:100px;
+        background-color: #9A88EC;
+        border: 0;
+        border-radius: 5px;
+        font-size: 30px;
+        color:white;
+        letter-spacing: 4px;
+        transition: transform 450ms, box-shadow 450ms;
+    }
+
+    .subscribe-button:hover{
+       transform: translateY(10px);
+       box-shadow:0px 30px 10px -10px #8173BE;
+       cursor: pointer;
+    }
+    /* Subscibe button end */
+    /* Learn more button start */
+    .learn-more {
+        margin-top:40px;
+        width:140px;
+        height:50px;
+        background-color: black;
+        border: 0;
+        border-radius: 30px;
+        font-size: 14px;
+        color:white;
+        letter-spacing: 1px;
+    }
+
+    .learn-more:hover {
+        background-color: lightgreen;
+        cursor: pointer;
+    }
+    /* Learn more button end */
+    /* Colorful buttons start */
+
+    .colorful-buttons {
+        margin-top:10px;
+        display:flex;
+        flex-direction: column;
+    }
+
+    .alpha-button, .beta-button, .gamma-button, .delta-button {
+        margin-top:10px;
+        width:200px;
+        height:55px;
+        background-color: #21D4FD;
+        border: 0;
+        border-radius: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        color: #AD32FD;
+        transition: background-color 500ms, color 500ms;
+    }
+
+    .alpha-button:hover {
+        background-color: #AD32FD;
+        color: #21D4FD;
+        cursor: pointer;
+    }
+
+    .beta-button {
+        background-color: #08AEEA;
+        color: #29F29E;
+    }
+
+    .beta-button:hover {
+        background-color: #29F29E;
+        color: #08AEEA;
+        cursor: pointer;
+    }
+
+    .gamma-button {
+        background-color: #FDE140;
+        color: #F8769A;
+    }
+
+    .gamma-button:hover {
+        background-color: #F8769A;
+        color: #FDE140;
+        cursor: pointer;
+    }
+
+    .delta-button {
+        background-color: #3EECAC;
+        color: #E977DD;
+    }
+
+    .delta-button:hover {
+        background-color: #E977DD;
+        color: #3EECAC;
+        cursor: pointer;
+    }
+    /* Colorful buttons end */
+    /* Animated clock start */
+    .clock-container {
+        margin-left: 100px;
+        width: 600px;
+        height: 600px;
+        background-color: grey;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .clock {
+        width:500px;
+        height:500px;
+        background-image: url(/pictures/clock/clock-background.png);
+        background-size:contain;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seconds-container {
+        width:80%;
+        height:80%;
+        display: flex;
+        justify-content: center;
+        animation-name: rotate-clock;
+        animation-duration: 60s;
+        animation-timing-function:steps(60);
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes rotate-clock {
+      from {
+          transform:rotate(0deg);
+      }
+      to {
+          transform:rotate(360deg);
+      }
+    }
+
+    .seconds {
+        background: red;
+        height: 50%;
+        width: 1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .clock::after {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          content: "";
+          background-color: black;
+          border-radius: 50%;
+      }
+      
+      /* Animated clock end */
