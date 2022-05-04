@@ -145,8 +145,7 @@ body {
     /* Colorful buttons end */
     /* Animated clock start */
     .clock-container {
-        margin-left: 5%;
-        flex-basis: 60%;
+        margin-left: 3%;
         width: 500px;
         height: 500px;
         background-color: grey;
@@ -157,8 +156,8 @@ body {
     }
 
     .clock {
-        width:400px;
-        height:400px;
+        width:350px;
+        height:350px;
         background-image: url(../../pictures/clock/clock-background.png);
         background-size:contain;
         border-radius: 50%;
@@ -210,12 +209,12 @@ body {
 
       .new-animations {
           display: flex;
-          justify-content:center;
+          flex-direction: column;
+          align-items: flex-start;
           min-width: 30%;
       }
           
       .send {
-          flex-basis: 90%;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -243,6 +242,7 @@ body {
       .send button:hover{
         background-color: white;
         color: #6C009B;
+        cursor: pointer;
     }
 
       .send button:hover + .hover-text{
@@ -252,4 +252,22 @@ body {
 
      /* Animated button with tooltip on hover end*/
      /* Equaliser start*/
-     
+     .equalizer {
+         display: flex;
+         min-height: 180px;
+         align-items: flex-end;
+         min-width: 100%;
+         justify-content: center;
+     }
+
+     .equalizer > div {
+         width:30px;
+         height: 30px;
+         background-color: #6C009B;
+         transition: 0.5s;
+     }
+
+     .equalizer > div:hover {
+         height: 180px ;
+         cursor: pointer;
+     }
