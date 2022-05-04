@@ -2,6 +2,10 @@ body {
     padding: 40px;
     display: flex;
   }
+
+.square-and-buttons {
+    flex-basis: 30%;
+}
   /* Rotate square start */
   .square {
         width: 150px;
@@ -141,9 +145,10 @@ body {
     /* Colorful buttons end */
     /* Animated clock start */
     .clock-container {
-        margin-left: 100px;
-        width: 600px;
-        height: 600px;
+        margin-left: 5%;
+        flex-basis: 60%;
+        width: 500px;
+        height: 500px;
         background-color: grey;
         border-radius: 10px;
         display: flex;
@@ -152,8 +157,8 @@ body {
     }
 
     .clock {
-        width:500px;
-        height:500px;
+        width:400px;
+        height:400px;
         background-image: url(../../pictures/clock/clock-background.png);
         background-size:contain;
         border-radius: 50%;
@@ -201,3 +206,50 @@ body {
       }
       
       /* Animated clock end */
+      /* Animated button with tooltip on hover start*/
+
+      .new-animations {
+          display: flex;
+          justify-content:center;
+          min-width: 30%;
+      }
+          
+      .send {
+          flex-basis: 90%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+
+      .send button {
+          max-width: 30%;
+          background-color: #6C009B;
+          color: white;
+          padding: 10px 20px 10px 20px;
+          border: 2px #6C009B solid;
+          border-radius: 5px;
+          font-weight: bold;
+          transition: 1s;
+      }
+
+      .send button + .hover-text {
+          max-width: 50%;
+          opacity: 0;
+          visibility: hidden;
+          transition: visibility 3s linear,opacity 2s linear;
+          transition-delay: 1s;
+      }
+
+      .send button:hover{
+        background-color: white;
+        color: #6C009B;
+    }
+
+      .send button:hover + .hover-text{
+        visibility: visible;
+        opacity: 1;
+    }
+
+     /* Animated button with tooltip on hover end*/
+     /* Equaliser start*/
+     
