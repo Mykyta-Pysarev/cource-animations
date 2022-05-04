@@ -154,7 +154,7 @@ body {
     .clock {
         width:500px;
         height:500px;
-        background-image: url(/pictures/clock/clock-background.png);
+        background-image: url(../../pictures/clock/clock-background.png);
         background-size:contain;
         border-radius: 50%;
         display: flex;
